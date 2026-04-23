@@ -1,0 +1,21 @@
+class Solution {
+    public String countAndSay(int n) {
+        if(n==1){
+            return "1"; 
+        }
+        String str = countAndSay(n-1);
+        String result = "";
+        int count = 0;
+        // int i = 0;
+        for(int i=0; i<str.length(); i++){
+            count++;
+        
+        if(i==str.length()-1 || str.charAt(i) != str.charAt(i+1)){
+            result = result + count + str.charAt(i);
+            count = 0;
+        }
+        
+    }
+    return result;
+    }
+}
